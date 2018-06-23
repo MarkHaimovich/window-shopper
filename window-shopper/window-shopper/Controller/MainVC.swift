@@ -38,10 +38,10 @@ class MainVC: UIViewController {
     @objc func calculate(){
         if let wageTxt = wageTXT.text, let priceTXT = priceTXT.text {
             if let wage = Double(wageTxt), let price = Double(priceTXT) {
-                view.endEditing(true)
-                resultLbl.isHidden = false
+                view.endEditing(true) //hide keyboard
+                resultLbl.isHidden = false //show labels
                 hoursLbl.isHidden = false
-                resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+                resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"//insert into function
             }
         }
     }
